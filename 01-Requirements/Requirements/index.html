@@ -825,40 +825,64 @@
   <h1>Module's Requirements</h1>
 
 <h2 id="module-requirements">Module Requirements</h2>
-<p>The following sections document the requirements that the this module need to fulfills to .....</p>
+<p>The following sections document the requirements that the camera system and charging station must fulfill to support the overall rover system. Each requirement specifies what the module must do, including functional performance thresholds, target performance, and whether it is a stretch goal. For example, the front camera must detect nearby objects with clear visual feedback (not a stretch goal). The reverse camera must show the rear view when reversing (stretch goal). The charging interface must reach the docking station and ideally start charging automatically (stretch goal).</p>
 <table>
 <thead>
 <tr>
-<th><strong>Requirement Description</strong></th>
-<th><strong>Measure of<br> Threshold</strong></th>
-<th><strong>Target<br>Measure</strong></th>
-<th style="text-align: center;"><strong>Stretch<br>Requirement<br>(Y-N)</strong></th>
+<th>Requirement Description</th>
+<th>Measure of Threshold</th>
+<th>Target Measure</th>
+<th>Stretch Requirement (Y-N)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Surface mounted, 3.3V switching power regulatore</td>
-<td>3.2 Volts</td>
-<td>3.3 Volts</td>
-<td style="text-align: center;">No</td>
+<td>Front Seeing Camera</td>
+<td>Camera module shows nearby objects; provides clear visual feedback for operator</td>
+<td>Detects objects at a good range for navigation</td>
+<td>N</td>
 </tr>
 <tr>
-<td>Surface mounted microcontroller</td>
+<td>Distance Sensor</td>
+<td>Ultrasonic or emitter/detector sensor; detects obstacles before collision</td>
+<td>Detects objects in close proximity and triggers a sound alert</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Servo (Camera Pan/Tilt)</td>
+<td>Hobby servo controlled via PWM; rotates at least 360°</td>
+<td>Moves camera to any required angle for full coverage</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Reverse Camera</td>
+<td>Camera module active when reversing; provides rear view</td>
+<td>Integrates with controller for operator awareness</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Charging Station</td>
+<td>Rover can sit in docking station</td>
+<td>Rover can charge without much user input</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Surface Mounted 3.3V Switching Power Regulator</td>
+<td>3.2V</td>
+<td>3.3V</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Surface Mounted Microcontroller</td>
 <td>1 PIC or ESP</td>
 <td>8-bit PIC</td>
-<td style="text-align: center;">No</td>
+<td>N</td>
 </tr>
 <tr>
 <td>Wireless Communication</td>
-<td>Able to send or receive a Wi-Fi data</td>
+<td>Able to send/receive data</td>
 <td>Send and receive Wi-Fi Data to MQTT</td>
-<td style="text-align: center;">Yes</td>
-</tr>
-<tr>
-<td><em>Rest are items your modules needs to support the task you are covering for the team's device.</em></td>
-<td>---</td>
-<td>---</td>
-<td style="text-align: center;"><strong>NO</strong></td>
+<td>Y</td>
 </tr>
 </tbody>
 </table>
