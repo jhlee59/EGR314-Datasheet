@@ -6,19 +6,8 @@ tags:
 ---
 
 ## Overview
-This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...
+This block diagram shows Team 301’s camera and sensor system, powered by a 5 V wall adapter regulated to 3.3 V. It includes motion and distance sensors, front and back cameras, and a servo. An ESP32 WiFi module connects wirelessly to an MQTT server for remote controlling and team coordination. 
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
+## Block Diagram 
 
-
-## Example Block Diagram 
-Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
-
-![Example of Indivial Block diagram ](individual-block-diagram.png)
+<img width="779" height="999" alt="Screenshot 2026-02-04 at 10 28 24 PM" src="https://github.com/user-attachments/assets/b900ae78-ec6d-4935-aa57-da443a5008d8" />
