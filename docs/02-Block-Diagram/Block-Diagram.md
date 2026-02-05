@@ -10,4 +10,4 @@ This block diagram shows Team 301’s camera and sensor system, powered by a 5 V
 
 ## Block Diagram 
 
-<img width="779" height="999" alt="Screenshot 2026-02-04 at 10 28 24 PM" src="https://github.com/user-attachments/assets/b900ae78-ec6d-4935-aa57-da443a5008d8" />
+<img width="743" height="949" alt="Screenshot 2026-02-04 at 10 43 46 PM" src="https://github.com/user-attachments/assets/22686a66-e1cd-45eb-a54b-cd039b10754c" />
