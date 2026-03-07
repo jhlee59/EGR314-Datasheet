@@ -1053,8 +1053,60 @@
 <h2 id="modules-selected-major-components">Module's Selected Major Components</h2>
 <p>The following sections are the selected major components necessary for the camera system for Meg. </p>
 <h3 id="power-management">Power Management</h3>
-<p>this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} </p>
-<p>For more details, review the <a href="">"Appendix - Component Selection Process - Power Mangement"</a> selection.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Manufacturer</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Price (1 unit)</th>
+<th>Datasheet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LM2575D2T-3.3R4G</td>
+<td>onsemi</td>
+<td>Reliable, simple design, supports up to 1A output current, wide input voltage range</td>
+<td>Larger package and lower efficiency compared to newer regulators</td>
+<td>~$2.49</td>
+<td><a href="https://www.onsemi.com/pdf/datasheet/lm2575-d.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>TPS62162DSGR</td>
+<td>Texas Instruments</td>
+<td>Very high efficiency (~95%), compact size, low heat generation</td>
+<td>Smaller package makes PCB layout more difficult</td>
+<td>~$1.85</td>
+<td><a href="https://www.ti.com/lit/ds/symlink/tps62162.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>MIC5504-3.3YM5</td>
+<td>Microchip Technology</td>
+<td>Low noise output, good for sensitive camera sensors, small footprint</td>
+<td>Only supports ~300mA output current</td>
+<td>~$0.65</td>
+<td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/MIC5504-Data-Sheet-DS20005810A.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>18650 Lithium-Ion Battery</td>
+<td>Various</td>
+<td>High capacity, rechargeable, common for robotics applications</td>
+<td>Requires protection and charging circuitry</td>
+<td>~$5.00</td>
+<td><a href="">Datasheet</a></td>
+</tr>
+<tr>
+<td>GST25A12-P1J 12V Adapter</td>
+<td>Mean Well</td>
+<td>Reliable regulated 12V output, wide input range (100–240VAC), safety certified</td>
+<td>Requires DC barrel jack connector and wall outlet</td>
+<td>~$11–14</td>
+<td><a href="https://www.meanwell-web.com/Article/DownloadAsset/GST25A-SPEC.PDF">Datasheet</a></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h1 id="rover-components-list">Rover Components List</h1>
 <h2 id="camera-modules">Camera Modules</h2>
