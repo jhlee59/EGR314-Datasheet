@@ -12,10 +12,6 @@ Written context needs to added!
 
 ## Bill of Materials 
 
-*Table #1
-# Rover PCB — Bill of Materials
-**Rev 2.0 | ESP32-S3 Camera System | Budget: $60.00 | All prices USD**
-
 | Part Name/Description | Qty | Unit Cost | Total Cost | Manufacturer | Manufacturer # | Vendor Link | Datasheet Link | Ref Des |
 |---|---|---|---|---|---|---|---|---|
 | ESP32-S3-WROOM-1-N4, WiFi/BT Module, SMD | 1 | $4.40 | $4.40 | Espressif | ESP32-S3-WROOM-1-N4 | [DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) | U1 |
