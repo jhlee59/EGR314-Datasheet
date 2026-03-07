@@ -10,5 +10,4 @@ This block diagram shows Team 301’s camera and sensor system, powered by a 12 
 
 ## Block Diagram 
 
-
-<img width="841" height="912" alt="IDBlockDiagram301 drawio" src="https://github.com/user-attachments/assets/558a3435-0614-434a-90e0-8cea0590b6eb" />
+<img width="842" height="912" alt="IDBlockDiagram301 drawio" src="https://github.com/user-attachments/assets/7e36c59e-603c-4519-93f1-cf4aa7ce5366" />
