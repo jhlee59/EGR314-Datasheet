@@ -8,9 +8,13 @@ The following sections are the selected major components necessary for the camer
 
 ### Power Management 
 
- this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable} 
-
-For more details, review the ["Appendix - Component Selection Process - Power Mangement"]() selection.
+| Name | Manufacturer | Pros | Cons | Price (1 unit) | Datasheet |
+|-----|-----|-----|-----|-----|-----|
+| LM2575D2T-3.3R4G | onsemi | Reliable, simple design, supports up to 1A output current, wide input voltage range | Larger package and lower efficiency compared to newer regulators | ~$2.49 | [Datasheet](https://www.onsemi.com/pdf/datasheet/lm2575-d.pdf) |
+| TPS62162DSGR | Texas Instruments | Very high efficiency (~95%), compact size, low heat generation | Smaller package makes PCB layout more difficult | ~$1.85 |  [Datasheet](https://www.ti.com/lit/ds/symlink/tps62162.pdf) |
+| MIC5504-3.3YM5 | Microchip Technology | Low noise output, good for sensitive camera sensors, small footprint | Only supports ~300mA output current | ~$0.65 |  [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/MIC5504-Data-Sheet-DS20005810A.pdf) |
+| 18650 Lithium-Ion Battery | Various | High capacity, rechargeable, common for robotics applications | Requires protection and charging circuitry | ~$5.00 | [Datasheet]() |
+| GST25A12-P1J 12V Adapter | Mean Well | Reliable regulated 12V output, wide input range (100–240VAC), safety certified | Requires DC barrel jack connector and wall outlet | ~$11–14 |  [Datasheet](https://www.meanwell-web.com/Article/DownloadAsset/GST25A-SPEC.PDF) | 
 
 -----------
 
