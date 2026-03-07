@@ -2,6 +2,7 @@
 title: Microcontroller Selection
 ---
 ESP32-S3-WROOM-1-N4
+
 Note: Work in Process, but half complete
 
 ## Project-Specific Requirements
