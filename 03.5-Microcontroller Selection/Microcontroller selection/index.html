@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#project-specific-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -640,6 +645,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Microcontroller Selection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -649,6 +665,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#project-specific-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project-Specific Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-n4-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32-S3-WROOM-1-N4 Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Choice
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -874,6 +952,59 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#project-specific-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project-Specific Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-n4-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32-S3-WROOM-1-N4 Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Choice
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -897,7 +1028,144 @@
 
   <h1>Microcontroller Selection</h1>
 
-<p>More information TBA</p>
+<p>ESP32-S3-WROOM-1-N4
+Note: Work in Process, but half complete</p>
+<h2 id="project-specific-requirements">Project-Specific Requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Camera interface</td>
+<td>Parallel DVP — 8 data lines + PCLK, VSYNC, HREF, XCLK = 11 GPIO</td>
+</tr>
+<tr>
+<td>I2C (SCCB)</td>
+<td>SDA + SCL for OV2640 config = 2 GPIO</td>
+</tr>
+<tr>
+<td>UART</td>
+<td>TX + RX for teammate communication = 2 GPIO</td>
+</tr>
+<tr>
+<td>USB</td>
+<td>D+ / D- for programming = 2 pins (IO19, IO20)</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>Debug LED, debug button, boot button, EN reset = 4 GPIO</td>
+</tr>
+<tr>
+<td><strong>Total GPIO needed</strong></td>
+<td><strong>21 pins</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="esp32-s3-wroom-1-n4-resources">ESP32-S3-WROOM-1-N4 Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Available</th>
+<th>Needed</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO</td>
+<td>45</td>
+<td>21</td>
+<td>Exceeds requirements</td>
+</tr>
+<tr>
+<td>I2C controllers</td>
+<td>2</td>
+<td>1</td>
+<td>Exceeds requirements</td>
+</tr>
+<tr>
+<td>UART controllers</td>
+<td>3</td>
+<td>1</td>
+<td>Exceeds requirements</td>
+</tr>
+<tr>
+<td>USB OTG (native)</td>
+<td>1</td>
+<td>1</td>
+<td>Meets requirements</td>
+</tr>
+<tr>
+<td>Camera DVP interface</td>
+<td>1 (hardware)</td>
+<td>1</td>
+<td>Meets requirements</td>
+</tr>
+<tr>
+<td>Flash</td>
+<td>4MB</td>
+<td>~2MB</td>
+<td>Meets requirements</td>
+</tr>
+<tr>
+<td>PSRAM</td>
+<td>None</td>
+<td>QVGA JPEG only</td>
+<td>Meets requirements with constraints</td>
+</tr>
+<tr>
+<td>WiFi</td>
+<td>802.11 b/g/n</td>
+<td>802.11 b/g/n</td>
+<td>Meets requirements</td>
+</tr>
+</tbody>
+</table>
+<h2 id="role-description">Role Description</h2>
+<p>This subsystem handles camera capture and wireless image transmission for the rover.
+The ESP32-S3 drives a bare OV2640 sensor over parallel DVP and configures it over I2C.
+Captured JPEG frames are streamed over WiFi via HTTP MJPEG to a ground station.
+UART communicates status and trigger commands to teammate subsystems.
+Power responsibilities include generating +3.3V, +2.8V, and +1.3V from +12V using three</p>
+<hr>
+<h2 id="compatibility">Compatibility</h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OV2640 + ESP32-S3 MicroPython</td>
+<td>Supported via <a href="https://github.com/cnadler86/micropython-camera-API">cnadler86/micropython-camera-API</a></td>
+</tr>
+<tr>
+<td>Parallel DVP</td>
+<td>Hardware-accelerated via LCD_CAM peripheral — no bit-banging</td>
+</tr>
+<tr>
+<td>No PSRAM</td>
+<td>QVGA + JPEG confirmed working in cnadler86 firmware</td>
+</tr>
+<tr>
+<td>SCCB vs I2C</td>
+<td>OV2640 SCCB is I2C-compatible at 100kHz — no issues</td>
+</tr>
+</tbody>
+</table>
+<h2 id="final-choice">Final Choice</h2>
+<p>The ESP32-S3-WROOM-1-N4 is optimal for three reasons: hardware DVP camera support via the
+LCD_CAM peripheral eliminates bit-banged capture; native USB OTG on IO19/IO20 removes the
+need for a separate USB-UART bridge; and integrated WiFi enables MJPEG streaming with no
+external radio. At $4.40 the N4 variant covers all requirements with 20+ GPIO to spare.</p>
+<p><strong>DigiKey:</strong> <a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">ESP32-S3-WROOM-1-N4</a></p>
 
 
 
