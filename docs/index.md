@@ -7,7 +7,7 @@ tags:
 <center>
 <font size= "6">Hattie Lee Datasheet</font><br>
 as part of<br>
-<font size= "8"> Project Name TBD </font><br>
+<font size= "8"> Meg the Rover </font><br>
 for<br>
 <font size= "5"> Team 301 </font><br>
 
@@ -16,19 +16,18 @@ for<br>
 
 ## Introduction
 
-* **This needs to be updated so that a reader gets an idea of the purpose of this datasheet.**
+This datasheet describes the design and hardware used for the camera and processing subsystem of the rover project. Its purpose is to document the components, electrical connections, and power management required for the subsystem to operate. This information allows readers to understand the design, reproduce the hardware, and integrate it with the rest of the rover system.
 
 ### Project Summary
 
-* This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.
-* Add context that ties into the link to your [team report.](https://asu-egr314-301-s-2026.github.io/EGR314-Team301/)
-* [Individual Block Diagram](https://jhlee59.github.io/EGR314-Datasheet/02-Block-Diagram/Block-Diagram/)
+The team project focuses on building a rover capable of wireless monitoring and visual feedback. The rover combines several subsystems including mobility, control, power management, and imaging to create a compact remote observation platform.
+
+My portion of the project focuses on the camera and processing subsystem built around the ESP32-S3-WROOM-1-N4 microcontroller. This subsystem captures images from the camera and transmits data wirelessly through WiFi. It includes the camera interface, processing module, and the power regulation needed to supply a stable 3.3 V rail.
+
+More information about the full rover system can be found in the team report:
+https://asu-egr314-301-s-2026.github.io/EGR314-Team301/
 
 ### My Contribution
 
-* This needs to be updated to reflect a team introduction
-* Content should also help an unfamiliar reader navigate to areas of interest. Information like:
+My role in the project is designing and documenting the camera subsystem.
 
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/) section of the datasheet.
-
->Continue for all the remaining/missing sections.
