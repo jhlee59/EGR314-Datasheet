@@ -24,8 +24,7 @@ The team project focuses on building a rover capable of wireless monitoring and 
 
 My portion of the project focuses on the camera and processing subsystem built around the ESP32-S3-WROOM-1-N4 microcontroller. This subsystem captures images from the camera and transmits data wirelessly through WiFi. It includes the camera interface, processing module, and the power regulation needed to supply a stable 3.3 V rail.
 
-More information about the full rover system can be found in the team report:
-https://asu-egr314-301-s-2026.github.io/EGR314-Team301/
+More information about the full rover system can be found in the team report:[here](https://asu-egr314-301-s-2026.github.io/EGR314-Team301/)
 
 ### My Contribution
 
