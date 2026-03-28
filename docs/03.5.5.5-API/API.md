@@ -1,6 +1,7 @@
 ---
-title: ID: API
+title: Power Budget
 ---
+
 To be edited 
 # Hattie Camera Node API (Node ID 0x03)
 
