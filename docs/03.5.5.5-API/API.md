@@ -1,5 +1,5 @@
 ---
-title: Power Budget
+title: API
 ---
 
 To be edited 
