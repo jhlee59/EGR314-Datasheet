@@ -2,6 +2,12 @@
 title: Power Budget
 ---
 
+## Power Budget
+
+This power budget was developed to ensure each voltage rail can safely supply all connected components under worst-case operating conditions. Absolute maximum current values were taken directly from the OV2640 and ESP32-S3 datasheets. A 25% safety margin was applied to every rail subtotal to account for transient current spikes, startup inrush, and component variation over temperature. The results confirmed that a linear regulator architecture was not viable; dropping 9V to 3.3V at 700 mA would dissipate roughly 3.9W of heat, requiring a heatsink and posing a thermal risk in an enclosed rover housing. This drove the decision to use switching regulators on all three rails. The LM2575D2T family was selected for all three rails because it efficiently handles the 9V input, and reusing a single part across U3, U4, and U5 eliminates three unique footprints from the BOM. The wall supply budget in Section D 9V 2A supply has approximately 1.19A.
+
+---
+
 ## Section A — All Major Components
 
 | Component | Part Number | Supply Voltage Range | # | Absolute Max Current (mA) | Total (mA) |
@@ -56,10 +62,10 @@ title: Power Budget
 | **Part** | LM2575D2T-3.3R4G | AMS1117-3.3 (LDO) | **LM2575D2T-3.3R4G** |
 | **Type** | Buck (switching) | LDO (linear) | |
 | **Max Output** | 1000 mA | 800 mA | |
-| **Efficiency** | ~77% | ~27% (12V→3.3V) | |
+| **Efficiency** | ~77% | ~37% (9V→3.3V) | |
 | **Pros** | High efficiency, handles 700 mA easily, low heat | Simple circuit, few external parts | |
-| **Cons** | Requires inductor + Schottky diode | Drops 8.7V as heat — ~6W dissipation at 700 mA, requires heatsink | |
-| **Rationale** | Dropping 12V→3.3V with a linear regulator at 700 mA = **6W of heat**. Buck regulator is required. | | |
+| **Cons** | Requires inductor + Schottky diode | Drops 5.7V as heat — ~4W dissipation at 700 mA, requires heatsink | |
+| **Rationale** | Dropping 9V→3.3V with a linear regulator at 700 mA = **4W of heat**. Buck regulator is required. | | |
 
 **Regulator or Source Choice:** U3 — LM2575D2T-3.3R4G | [DigiKey](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/1476688)
 **Total Remaining Current Available on +3.3V Rail:** 1000 − 700 = **300 mA**
@@ -104,7 +110,7 @@ title: Power Budget
 
 | Component | Part | Input | Output Voltage | Max Current (mA) | Unit |
 |---|---|---|---|---|---|
-| Wall Supply | J4 (12V DC barrel jack) | 110VAC | +12V | 2000 | mA |
+| Wall Supply | J4 (9V DC barrel jack) | 110VAC | +9V | 2000 | mA |
 
 | Power Rails Connected to Source 1 | Regulator | Current Required (mA) |
 |---|---|---|
@@ -114,7 +120,6 @@ title: Power Budget
 | **Total Required** | | **813 mA** |
 | **Total Available** | | **2000 mA** |
 | **Total Remaining** | | **1187 mA** |
-
 
 ---
 
