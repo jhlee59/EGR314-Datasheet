@@ -13,8 +13,8 @@ for<br>
 
 **Submission: May, 04, 2026**
 </center>
+<img width="3859" height="2895" alt="314_final" src="https://github.com/user-attachments/assets/aaf9a387-a112-4d4b-88b2-80d1d116e423" />
 
-<img width="805" height="542" alt="Screenshot 2026-05-04 at 1 55 43 PM" src="https://github.com/user-attachments/assets/3d2a02f5-56d5-4719-939d-a9e3a9df4a15" />
 
 ## Introduction
 
