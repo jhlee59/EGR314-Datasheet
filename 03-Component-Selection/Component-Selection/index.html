@@ -720,13 +720,49 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Module's Selected Major Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-component-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Component Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#power-management" class="md-nav__link">
     <span class="md-ellipsis">
       Power Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#33v-voltage-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3V Voltage Regulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28v-voltage-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8V Voltage Regulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12v-voltage-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2V Voltage Regulator
     </span>
   </a>
   
@@ -765,8 +801,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#esp32-pinout-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32 Pinout Table
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ov2640-camera-interface-pins" class="md-nav__link">
+    <span class="md-ellipsis">
+      OV2640 Camera Interface Pins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-system-pins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; System Pins
+    </span>
+  </a>
   
 </li>
       
@@ -1233,13 +1296,49 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Module's Selected Major Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-component-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Component Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#power-management" class="md-nav__link">
     <span class="md-ellipsis">
       Power Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#33v-voltage-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3V Voltage Regulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28v-voltage-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8V Voltage Regulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12v-voltage-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2V Voltage Regulator
     </span>
   </a>
   
@@ -1278,8 +1377,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#esp32-pinout-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32 Pinout Table
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ov2640-camera-interface-pins" class="md-nav__link">
+    <span class="md-ellipsis">
+      OV2640 Camera Interface Pins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-system-pins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; System Pins
+    </span>
+  </a>
   
 </li>
       
@@ -1306,9 +1432,57 @@
   
 
 
+  <h1>Module's Selected Major Components</h1>
+
 <h2 id="modules-selected-major-components">Module's Selected Major Components</h2>
-<p>The following sections are the selected major components necessary for the camera system for Meg. </p>
-<h3 id="power-management">Power Management</h3>
+<p>The following sections are the selected major components necessary for the camera system for Meg.</p>
+<hr>
+<h2 id="final-component-summary">Final Component Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Part Number</th>
+<th>Manufacturer</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESP32-CAM</td>
+<td>ESP32-CAM WiFi BT BLE</td>
+<td>AI-Thinker / Canaduino</td>
+<td>OV2640 camera</td>
+</tr>
+<tr>
+<td>3.3V Switching Regulator</td>
+<td>LM2575D2T-3.3R4G</td>
+<td>onsemi</td>
+<td>Logic power rail for ESP32</td>
+</tr>
+<tr>
+<td>2.8V Switching Regulator</td>
+<td>LM2575D2T-ADJG</td>
+<td>onsemi</td>
+<td>Camera sensor analog supply (AVDD)</td>
+</tr>
+<tr>
+<td>1.2V Switching Regulator</td>
+<td>LM2575D2T-ADJG</td>
+<td>onsemi</td>
+<td>Camera core digital supply (DVDD)</td>
+</tr>
+<tr>
+<td>Wall Power Supply</td>
+<td>GST25A12-P1J</td>
+<td>Mean Well</td>
+<td>9V DC 2.08A main input supply</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="power-management">Power Management</h2>
+<h3 id="33v-voltage-regulator">3.3V Voltage Regulator</h3>
 <table>
 <thead>
 <tr>
@@ -1322,7 +1496,7 @@
 </thead>
 <tbody>
 <tr>
-<td>LM2575D2T-3.3R4G</td>
+<td><strong>LM2575D2T-3.3R4G</strong> ✓</td>
 <td>onsemi</td>
 <td>Reliable, simple design, supports up to 1A output current, wide input voltage range</td>
 <td>Larger package and lower efficiency compared to newer regulators</td>
@@ -1347,9 +1521,9 @@
 </tr>
 </tbody>
 </table>
+<p>The LM2575D2T-3.3R4G was selected for its simple, proven design and compatibility with the 9V input from the Mean Well supply. Its fixed 3.3V output directly powers the ESP32 logic rail without requiring external resistor tuning, reducing design risk.</p>
 <hr>
-<h1 id="rover-components-list">Rover Components List</h1>
-<h2 id="camera-modules">Camera Modules</h2>
+<h3 id="28v-voltage-regulator">2.8V Voltage Regulator</h3>
 <table>
 <thead>
 <tr>
@@ -1363,10 +1537,93 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.digikey.com/en/products/detail/canaduino-/ESP32-CAM-WIFI-BT-BLE/14319859">ESP32‑CAM WiFi BT BLE</a></td>
-<td>Canaduino / AI‑Thinker</td>
-<td>Integrated MCU + camera, easy ESP32 integration</td>
-<td>Not pure camera IC, board adds size</td>
+<td><strong>LM2575D2T-ADJG</strong> ✓</td>
+<td>onsemi</td>
+<td>Same footprint as 3.3V rail regulator — reuses existing schematic symbol and layout, output set by two resistors to exactly 2.8V, 1A output, wide 4V–40V input range</td>
+<td>Larger TO-263 package compared to newer compact alternatives; lower switching frequency (52 kHz) means larger external inductor</td>
+<td>$2.49</td>
+<td><a href="https://www.onsemi.com/download/data-sheet/pdf/lm2575-d.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>TPS62162DSGR</td>
+<td>Texas Instruments</td>
+<td>Very high efficiency (~95%), compact 8-WSON package, 3MHz switching frequency allows tiny inductor</td>
+<td>Minimum input voltage of 3V — tighter margin from 9V rail; smaller package increases PCB layout difficulty</td>
+<td>$1.85</td>
+<td><a href="https://www.ti.com/lit/ds/symlink/tps62162.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>AP2112K-2.8TRG1</td>
+<td>Diodes Inc.</td>
+<td>Ultra-small SOT-25 footprint, very low noise — ideal for analog camera rails</td>
+<td>LDO, not switching — drops (9V − 2.8V) × I as heat; not practical at 1A from 9V input</td>
+<td>$0.42</td>
+<td><a href="https://www.diodes.com/assets/Datasheets/AP2112.pdf">Datasheet</a></td>
+</tr>
+</tbody>
+</table>
+<p>The LM2575D2T-ADJG was selected because it shares the exact same package, schematic symbol, and BOM family as the 3.3V regulator already on the board (LM2575D2T-3.3R4G). Setting the output to 2.8V requires only two external resistors per the datasheet voltage divider formula, and reusing one regulator family across three rails reduces design risk, simplifies layout, and streamlines assembly.</p>
+<hr>
+<h3 id="12v-voltage-regulator">1.2V Voltage Regulator</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Manufacturer</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Price (1 unit)</th>
+<th>Datasheet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LM2575D2T-ADJG</strong> ✓</td>
+<td>onsemi</td>
+<td>Consistent with 3.3V and 2.8V rails — single regulator family for all three supplies; output adjustable to 1.2V via resistor divider; proven 1A capability; TO-263 is solderable by hand for rework</td>
+<td>52 kHz switching frequency requires a larger inductor than high-frequency alternatives; TO-263 footprint is oversized relative to the current budget of this rail</td>
+<td>$2.49</td>
+<td><a href="https://www.onsemi.com/download/data-sheet/pdf/lm2575-d.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>NCV6323FELMTW12TBG</td>
+<td>onsemi</td>
+<td>2A output, compact WDFN package, 2MHz switching for small passive components</td>
+<td>Higher complexity layout; WDFN exposed-pad requires reliable solder reflow — harder to hand rework</td>
+<td>$1.12</td>
+<td><a href="https://www.onsemi.com/download/data-sheet/pdf/ncv6323-d.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>TPS62203DBVT</td>
+<td>Texas Instruments</td>
+<td>Very compact SOT-23-5, purpose-built for low-voltage low-current core rails, high efficiency</td>
+<td>300mA maximum output — marginal for camera core under full load; fixed 0.6V reference requires precise resistor values</td>
+<td>$0.95</td>
+<td><a href="https://www.ti.com/lit/ds/symlink/tps62203.pdf">Datasheet</a></td>
+</tr>
+</tbody>
+</table>
+<p>The LM2575D2T-ADJG was again selected to maintain a single regulator family across all three power rails. While alternatives offer higher switching frequency and smaller packages, the consistency benefit — one inductor value, one feedback resistor network topology, one layout pattern — outweighs the size penalty at this board scale. The output is set to 1.2V using the standard resistor divider on the ADJ pin per the datasheet.</p>
+<hr>
+<h2 id="rover-components-list">Rover Components List</h2>
+<h3 id="camera-modules">Camera Modules</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Manufacturer</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Price (1 unit)</th>
+<th>Datasheet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.digikey.com/en/products/detail/canaduino-/ESP32-CAM-WIFI-BT-BLE/14319859"><strong>ESP32-CAM WiFi BT BLE</strong></a> ✓</td>
+<td>Canaduino / AI-Thinker</td>
+<td>Integrated MCU + OV2640 camera + Wi-Fi in one module; eliminates separate camera IC and wireless chip</td>
+<td>Not a pure SMD camera IC; board form factor adds height</td>
 <td>$16.99</td>
 <td><a href="https://www.allelcoelec.com/productdetails/ESP32-CAM%20WiFi%20BT%20BLE.html">Datasheet</a></td>
 </tr>
@@ -1381,14 +1638,14 @@
 <tr>
 <td><a href="https://www.digikey.com/en/products/detail/dfrobot/DFR0602/10385116">DFRobot DFR0602</a></td>
 <td>DFRobot</td>
-<td>Includes OV2640 2MP, same ESP32‑CAM function</td>
+<td>Includes OV2640 2MP, same ESP32-CAM function</td>
 <td>Not SMD-only camera chip, board form factor</td>
 <td>$16.95</td>
 <td><a href="https://www.dfrobot.com/product-1783.html">Datasheet</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="power-supplies">Power Supplies</h2>
+<h3 id="power-supplies">Power Supplies</h3>
 <table>
 <thead>
 <tr>
@@ -1402,28 +1659,194 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.digikey.com/en/products/detail/tri-mag-llc/L6R24-120/7682639">Tri‑Mag L6R24‑120</a></td>
-<td>Tri‑Mag LLC</td>
-<td>9 V, 2 A regulated, barrel jack ready</td>
+<td><a href="https://www.digikey.com/en/products/detail/tri-mag-llc/L6R24-120/7682639">Tri-Mag L6R24-120</a></td>
+<td>Tri-Mag LLC</td>
+<td>9V, 2A regulated, barrel jack ready</td>
 <td>Basic functionality only</td>
 <td>$10.38</td>
 <td><a href="https://www.digikey.com/en/products/detail/tri-mag-llc/L6R24-120/7682639">Product Page</a></td>
 </tr>
 <tr>
-<td><a href="https://www.digikey.com/en/products/detail/jameco-electronics/SDI24-12-UD-P5-JVP/25966103">SDI24‑12‑UD‑P5‑JVP</a></td>
+<td><a href="https://www.digikey.com/en/products/detail/jameco-electronics/SDI24-12-UD-P5-JVP/25966103">SDI24-12-UD-P5-JVP</a></td>
 <td>Jameco Electronics</td>
-<td>9 V AC/DC 2 A, barrel jack</td>
+<td>9V AC/DC 2A, barrel jack</td>
 <td>Bulkier wall adapter</td>
 <td>$7.70</td>
 <td><a href="https://www.digikey.com/en/products/detail/jameco-electronics/SDI24-12-UD-P5-JVP/25966103">Product Page</a></td>
 </tr>
 <tr>
-<td><a href="https://www.digikey.com/en/products/detail/delta-electronics/MDS-030AAC12-AB/6150232">Delta MDS‑030AAC12‑AB</a></td>
+<td><a href="https://www.digikey.com/en/products/detail/delta-electronics/MDS-030AAC12-AB/6150232">Delta MDS-030AAC12-AB</a></td>
 <td>Delta Electronics</td>
-<td>Reliable, 12 V 2.5 A</td>
+<td>Reliable, 12V 2.5A</td>
 <td>More current than needed</td>
 <td>$12.50</td>
 <td><a href="https://www.delta.com.tw/product/AC-DC_Power_Supply/En/MDS-030AAC12-AB">Datasheet</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="esp32-pinout-table">ESP32 Pinout Table</h3>
+<h2 id="ov2640-camera-interface-pins">OV2640 Camera Interface Pins</h2>
+<table>
+<thead>
+<tr>
+<th>GPIO</th>
+<th>Camera Signal</th>
+<th>Direction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO 32</td>
+<td>PWDN</td>
+<td>Output</td>
+<td>Camera power-down control</td>
+</tr>
+<tr>
+<td>GPIO 0</td>
+<td>XCLK</td>
+<td>Output</td>
+<td>Master clock to camera (10 MHz)</td>
+</tr>
+<tr>
+<td>GPIO 26</td>
+<td>SIOD (SDA)</td>
+<td>Bidirectional</td>
+<td>SCCB/I2C data — camera register config</td>
+</tr>
+<tr>
+<td>GPIO 27</td>
+<td>SIOC (SCL)</td>
+<td>Output</td>
+<td>SCCB/I2C clock — camera register config</td>
+</tr>
+<tr>
+<td>GPIO 35</td>
+<td>Y9 (D7)</td>
+<td>Input</td>
+<td>Pixel data bit 7 (MSB)</td>
+</tr>
+<tr>
+<td>GPIO 34</td>
+<td>Y8 (D6)</td>
+<td>Input</td>
+<td>Pixel data bit 6</td>
+</tr>
+<tr>
+<td>GPIO 39</td>
+<td>Y7 (D5)</td>
+<td>Input</td>
+<td>Pixel data bit 5</td>
+</tr>
+<tr>
+<td>GPIO 36</td>
+<td>Y6 (D4)</td>
+<td>Input</td>
+<td>Pixel data bit 4</td>
+</tr>
+<tr>
+<td>GPIO 21</td>
+<td>Y5 (D3)</td>
+<td>Input</td>
+<td>Pixel data bit 3</td>
+</tr>
+<tr>
+<td>GPIO 19</td>
+<td>Y4 (D2)</td>
+<td>Input</td>
+<td>Pixel data bit 2</td>
+</tr>
+<tr>
+<td>GPIO 18</td>
+<td>Y3 (D1)</td>
+<td>Input</td>
+<td>Pixel data bit 1</td>
+</tr>
+<tr>
+<td>GPIO 5</td>
+<td>Y2 (D0)</td>
+<td>Input</td>
+<td>Pixel data bit 0 (LSB)</td>
+</tr>
+<tr>
+<td>GPIO 25</td>
+<td>VSYNC</td>
+<td>Input</td>
+<td>Vertical sync — marks frame boundary</td>
+</tr>
+<tr>
+<td>GPIO 23</td>
+<td>HREF</td>
+<td>Input</td>
+<td>Horizontal reference — marks line boundary</td>
+</tr>
+<tr>
+<td>GPIO 22</td>
+<td>PCLK</td>
+<td>Input</td>
+<td>Pixel clock — latches each pixel byte</td>
+</tr>
+</tbody>
+</table>
+<h2 id="communication-system-pins">Communication &amp; System Pins</h2>
+<table>
+<thead>
+<tr>
+<th>GPIO</th>
+<th>Function</th>
+<th>Direction</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO 17</td>
+<td>UART2 TX</td>
+<td>Output</td>
+<td>Serial transmit — programming and telemetry</td>
+</tr>
+<tr>
+<td>GPIO 16</td>
+<td>UART2 RX</td>
+<td>Input</td>
+<td>Serial receive — programming and telemetry</td>
+</tr>
+<tr>
+<td>GPIO 4</td>
+<td>Flash LED</td>
+<td>Output</td>
+<td>Onboard white flash LED (also SD card HS_DATA1)</td>
+</tr>
+<tr>
+<td>GPIO 33</td>
+<td>Status LED</td>
+<td>Output</td>
+<td>Onboard red LED — active LOW</td>
+</tr>
+<tr>
+<td>GPIO 0</td>
+<td>Boot mode</td>
+<td>Input</td>
+<td>LOW = flash mode; HIGH = run mode (pull-up)</td>
+</tr>
+<tr>
+<td>3.3V</td>
+<td>Power in</td>
+<td>—</td>
+<td>Logic supply from LM2575D2T-3.3R4G rail</td>
+</tr>
+<tr>
+<td>5V</td>
+<td>Power in</td>
+<td>—</td>
+<td>Main board supply (recommended input)</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Ground</td>
+<td>—</td>
+<td>Common ground</td>
 </tr>
 </tbody>
 </table>
