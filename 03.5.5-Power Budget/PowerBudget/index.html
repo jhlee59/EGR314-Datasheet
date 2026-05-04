@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#section-a-all-major-components" class="md-skip">
+        <a href="#power-budget" class="md-skip">
           Skip to content
         </a>
       
@@ -806,6 +806,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#section-a-all-major-components" class="md-nav__link">
     <span class="md-ellipsis">
       Section A — All Major Components
@@ -1296,6 +1305,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#section-a-all-major-components" class="md-nav__link">
     <span class="md-ellipsis">
       Section A — All Major Components
@@ -1446,6 +1464,9 @@
 
   <h1>Power Budget</h1>
 
+<h2 id="power-budget">Power Budget</h2>
+<p>This power budget was developed to ensure each voltage rail can safely supply all connected components under worst-case operating conditions. Absolute maximum current values were taken directly from the OV2640 and ESP32-S3 datasheets. A 25% safety margin was applied to every rail subtotal to account for transient current spikes, startup inrush, and component variation over temperature. The results confirmed that a linear regulator architecture was not viable; dropping 9V to 3.3V at 700 mA would dissipate roughly 3.9W of heat, requiring a heatsink and posing a thermal risk in an enclosed rover housing. This drove the decision to use switching regulators on all three rails. The LM2575D2T family was selected for all three rails because it efficiently handles the 9V input, and reusing a single part across U3, U4, and U5 eliminates three unique footprints from the BOM. The wall supply budget in Section D 9V 2A supply has approximately 1.19A.</p>
+<hr>
 <h2 id="section-a-all-major-components">Section A — All Major Components</h2>
 <table>
 <thead>
@@ -1694,7 +1715,7 @@
 <tr>
 <td><strong>Efficiency</strong></td>
 <td>~77%</td>
-<td>~27% (12V→3.3V)</td>
+<td>~37% (9V→3.3V)</td>
 <td></td>
 </tr>
 <tr>
@@ -1706,12 +1727,12 @@
 <tr>
 <td><strong>Cons</strong></td>
 <td>Requires inductor + Schottky diode</td>
-<td>Drops 8.7V as heat — ~6W dissipation at 700 mA, requires heatsink</td>
+<td>Drops 5.7V as heat — ~4W dissipation at 700 mA, requires heatsink</td>
 <td></td>
 </tr>
 <tr>
 <td><strong>Rationale</strong></td>
-<td>Dropping 12V→3.3V with a linear regulator at 700 mA = <strong>6W of heat</strong>. Buck regulator is required.</td>
+<td>Dropping 9V→3.3V with a linear regulator at 700 mA = <strong>4W of heat</strong>. Buck regulator is required.</td>
 <td></td>
 <td></td>
 </tr>
@@ -1840,9 +1861,9 @@
 <tbody>
 <tr>
 <td>Wall Supply</td>
-<td>J4 (12V DC barrel jack)</td>
+<td>J4 (9V DC barrel jack)</td>
 <td>110VAC</td>
-<td>+12V</td>
+<td>+9V</td>
 <td>2000</td>
 <td>mA</td>
 </tr>
