@@ -26,7 +26,7 @@
 
     
       
-        <title>V2 - EGR314 Lee Data Sheet</title>
+        <title>Hardware V2.0 - EGR314 Lee Data Sheet</title>
       
     
     
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              V2
+              Hardware V2.0
             
           </span>
         </div>
@@ -1020,7 +1020,7 @@
         
   
   <span class="md-ellipsis">
-    V2
+    Hardware V2.0
   </span>
   
 
@@ -1217,7 +1217,13 @@
   
 
 
-  <h1>V2</h1>
+  <h1>Hardware V2.0</h1>
+
+<p>The most impactful physical error in V1.0 was the FFC/FPC ribbon cable footprint. The pad spacing and connector orientation on the PCB did not match the physical dimensions of the MECCANIXITY 24-pin 0.5mm adapter, making it unreliable to seat the camera ribbon cable and requiring rework during bring-up. In V2.0, the footprint would be redrawn directly from the mechanical drawing in the connector datasheet rather than pulled from a generic library symbol, and a small breakout test coupon of just the connector would be ordered before committing the footprint to the full board. Beyond the physical footprint, the signal traces routed to the ribbon cable connector would also be corrected. In V1.0, several trace lengths between the FFC connector and the ESP32-S3 were unequal across the parallel pixel data bus, where the eight data lines Y2 through Y9 run simultaneously at the OV2640's pixel clock rate. Unequal trace lengths introduce skew between data lines, which can corrupt frames at higher resolutions, so V2.0 would apply length-matched routing across all eight data lines, as well as the PCLK, HREF, and VSYNC control signals.</p>
+<p>The tactile switch footprints for SW1, SW2, and SW3 also had trace routing errors in V1.0, where connections did not correctly tie to the intended GPIO and ground pads, requiring jumper wire fixes during board bring-up before the switches functioned as intended. The root cause was a mismatch between the schematic symbol pin numbering and the physical pad numbering on the GCT SWT0315 footprint, which was not caught during review because the ERC passed without flagging the swap. In V2.0, every switch footprint would be cross-referenced against the manufacturer's mechanical drawing before layout, and the DRC would be run with a stricter unconnected net policy to catch any floating switch pins before sending the board to fabrication.</p>
+<p>The most significant architectural change in V2.0 would be replacing the OV2640 camera module with a sensor that does not compete with the ESP32's wireless stack for processor time. In V1.0, the ESP32-S3's dual-core architecture proved insufficient to reliably handle both raw pixel data capture from the OV2640 and maintain the Wi-Fi connection needed to publish telemetry to the MQTT server simultaneously. Running both at once caused long frame load times, intermittent frame drops, and, in some cases, watchdog timer resets as the processor could not service both tasks within their deadlines. The practical consequence was that a choice had to be made between communicating with the rest of the team's daisy chain or capturing camera data, which directly undermined the module's purpose. In V2.0, this would be resolved by selecting a camera module with an onboard image signal processor that outputs pre-compressed JPEG data over a simple SPI or UART interface. With that architecture, the ESP32 only handles receiving and forwarding a finished compressed frame rather than processing raw parallel pixel data, freeing the CPU almost entirely for the Wi-Fi and MQTT stacks and allowing both the camera and the network connection to operate concurrently without contention.</p>
+<p>In V1.0, the 2.8V and 1.2V rails were implemented using the adjustable LM2575D2T-ADJG with external resistor voltage dividers on the ADJ pin. While this approach was chosen for BOM consistency with the fixed 3.3V regulator, the resistor divider calculation and physical placement introduced complications during bring-up. The tolerance stack-up between the top and bottom feedback resistors meant that output voltages had to be verified and trimmed with a multimeter, and any resistor placement error shifted the output enough to put the OV2640's AVDD or DVDD rails outside their rated range, risking sensor damage. In V2.0, fixed-voltage regulator variants would be used for the 2.8V and 1.2V rails wherever available, eliminating the feedback resistor network entirely and producing a known output voltage straight from the part with no trimming required. This would reduce bring-up time, lower the risk of rail voltage errors, and simplify the schematic and layout for both rails.</p>
+<p>Finally, the Micro-B USB connector footprint (J3) had through-hole pin spacing that did not match the physical part, causing the connector body to sit on the board weirdly and resulting in multiple connectors breaking during insertion attempts, as the pins were stressed rather than seating cleanly. In V2.0, the footprint would be replaced with one verified against the GCT USB3131 mechanical drawing, and the through-hole annular rings would be sized to the larger of the IPC-A-610 recommendation or the manufacturer's stated lead diameter to ensure a reliable solder joint. Additionally, strain relief pads or a board edge keep-out would be added around the connector to prevent mechanical stress from cable insertion from transferring directly to the solder joints.</p>
 
 
 
@@ -1225,7 +1231,8 @@
 
 
 
-
+  
+  
 
 
 
