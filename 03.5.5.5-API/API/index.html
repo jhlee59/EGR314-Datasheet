@@ -856,35 +856,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#node-responsibilities" class="md-nav__link">
+  <a href="#packet-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Node Responsibilities
+      Packet Structure
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Message Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-h-sent-by-camera-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. H — Sent by Camera Node
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -898,9 +874,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#node-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-sent-by-hattie-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Sent by Hattie (H)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-received-by-hattie-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Received by Hattie (H)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#routing-rules" class="md-nav__link">
     <span class="md-ellipsis">
       Routing Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
     </span>
   </a>
   
@@ -1227,35 +1239,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#node-responsibilities" class="md-nav__link">
+  <a href="#packet-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Node Responsibilities
+      Packet Structure
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Message Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-h-sent-by-camera-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. H — Sent by Camera Node
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1269,9 +1257,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#node-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Responsibilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-sent-by-hattie-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Sent by Hattie (H)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-received-by-hattie-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Received by Hattie (H)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#routing-rules" class="md-nav__link">
     <span class="md-ellipsis">
       Routing Rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
     </span>
   </a>
   
@@ -1301,47 +1325,49 @@
 
 
 <h1 id="hattie-camera-node-api">Hattie Camera Node API</h1>
-<p>This page defines the canonical API for the Hattie camera subsystem in the team daisy-chain architecture. </p>
-<p>Node ID: <code>H</code><br>
-Role: Camera / Sensors  </p>
+<p>This page defines the canonical API for the Hattie camera subsystem in the team daisy-chain architecture.</p>
+<p>Node ID: <code>H</code>
+Role: Camera / Sensors</p>
 <hr>
-<h2 id="node-responsibilities">Node Responsibilities</h2>
-<ul>
-<li>Send camera data.</li>
-</ul>
-<hr>
-<h2 id="message-types">Message Types</h2>
-<h3 id="1-h-sent-by-camera-node">1. <code>H</code> — Sent by Camera Node</h3>
+<h2 id="packet-structure">Packet Structure</h2>
+<p>All nodes on the daisy-chain share a fixed 64-byte packet format over UART at 9600 baud, 8N1.</p>
 <table>
 <thead>
 <tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Min</th>
-<th>Max</th>
-<th>Example</th>
+<th>Byte(s)</th>
+<th>Field</th>
+<th>Value / Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>0–1</td>
+<td>Prefix</td>
+<td>Always <code>AZ</code> (0x41 0x5A) — marks start of frame</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>2</td>
+<td>Source ID</td>
+<td>Single ASCII character identifying the sending node</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Destination ID</td>
+<td>Single ASCII character identifying the target node</td>
+</tr>
+<tr>
+<td>4–61</td>
+<td>Message</td>
+<td>UTF-8 string payload, null-padded to fill remaining space</td>
+</tr>
+<tr>
+<td>62–63</td>
+<td>Suffix</td>
+<td>Always <code>BY</code> (0x42 0x59) — marks end of frame</td>
 </tr>
 </tbody>
 </table>
+<p><strong>UART Configuration:</strong> UART2, pins TX=43 / RX=44, 9600 baud, 8 data bits, no parity, 1 stop bit.</p>
 <hr>
 <h2 id="node-addressing">Node Addressing</h2>
 <table>
@@ -1349,38 +1375,221 @@ Role: Camera / Sensors  </p>
 <tr>
 <th>Node</th>
 <th>ID</th>
+<th>Role</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Riley (Sensor)</td>
-<td>F</td>
+<td>Rylee</td>
+<td><code>W</code></td>
+<td>Controller</td>
 </tr>
 <tr>
-<td>Bryce (Motor)</td>
-<td>B</td>
+<td>Bryce</td>
+<td><code>B</code></td>
+<td>Motor</td>
 </tr>
 <tr>
-<td>**Hattie (Camera)</td>
-<td>H</td>
+<td><strong>Hattie</strong></td>
+<td><strong><code>H</code></strong></td>
+<td><strong>Camera / Sensors</strong></td>
 </tr>
 <tr>
-<td>Rylee (Controller)</td>
-<td>W</td>
+<td>Riley</td>
+<td><code>F</code></td>
+<td>Sensor</td>
 </tr>
 <tr>
-<td>Tim (Motor Node)</td>
-<td>T</td>
+<td>Tim</td>
+<td><code>T</code></td>
+<td>Motor</td>
 </tr>
 <tr>
 <td>Everyone (Broadcast)</td>
-<td>E</td>
+<td><code>X</code></td>
+<td>All nodes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="node-responsibilities">Node Responsibilities</h2>
+<ul>
+<li>Receive packets addressed to <code>H</code> and process them.</li>
+<li>Acknowledge any packet addressed directly to <code>H</code> by replying with <code>ACK</code> to the sender.</li>
+<li>Forward packets addressed to other nodes unchanged.</li>
+<li>Forward broadcast packets (<code>X</code>) to the next node in the chain.</li>
+<li>Drop packets from unknown senders or looped-back own messages.</li>
+<li>Toggle onboard LED on Pin 2 when a packet addressed to this node is received.</li>
+</ul>
+<hr>
+<h2 id="messages-sent-by-hattie-h">Messages Sent by Hattie (<code>H</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Field</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–1</td>
+<td>Prefix</td>
+<td><code>AZ</code></td>
+<td>Frame start</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Source</td>
+<td><code>H</code></td>
+<td>Sender is Hattie</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Destination</td>
+<td>Varies</td>
+<td>ID of node being acknowledged</td>
+</tr>
+<tr>
+<td>4–6</td>
+<td>Message</td>
+<td><code>ACK</code></td>
+<td>Acknowledgment of received packet</td>
+</tr>
+<tr>
+<td>7–61</td>
+<td>Padding</td>
+<td><code>0x00</code></td>
+<td>Null bytes to fill frame</td>
+</tr>
+<tr>
+<td>62–63</td>
+<td>Suffix</td>
+<td><code>BY</code></td>
+<td>Frame end</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example packet string:</strong> <code>AZHWACKby</code> → Hattie acknowledging a message from Rylee (W).</p>
+<hr>
+<h2 id="messages-received-by-hattie-h">Messages Received by Hattie (<code>H</code>)</h2>
+<p>Hattie accepts any valid 64-byte packet where destination byte = <code>H</code> or <code>X</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Expected Message</th>
+<th>Hattie's Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Any known node</td>
+<td><code>H</code></td>
+<td>Any string payload</td>
+<td>Turns on LED, prints content, sends <code>ACK</code> back to sender</td>
+</tr>
+<tr>
+<td>Any known node</td>
+<td><code>X</code></td>
+<td>Any broadcast string</td>
+<td>Prints broadcast, forwards packet to next node</td>
+</tr>
+<tr>
+<td>Any known node</td>
+<td>Other node ID</td>
+<td>Any string payload</td>
+<td>Forwards packet unchanged, no ACK</td>
+</tr>
+<tr>
+<td>Unknown node</td>
+<td>Any</td>
+<td>Any</td>
+<td>Discards packet, prints error</td>
+</tr>
+<tr>
+<td><code>H</code> (self)</td>
+<td>Any</td>
+<td>Any</td>
+<td>Discards packet (loop prevention)</td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h2 id="routing-rules">Routing Rules</h2>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dst == H</code></td>
+<td>Process message, send ACK, turn on LED</td>
+</tr>
+<tr>
+<td><code>dst == X</code></td>
+<td>Print broadcast content, forward packet</td>
+</tr>
+<tr>
+<td><code>dst</code> is another known node</td>
+<td>Forward packet unchanged</td>
+</tr>
+<tr>
+<td><code>src</code> is unknown</td>
+<td>Discard, print error</td>
+</tr>
+<tr>
+<td><code>src == H</code> (own message looped back)</td>
+<td>Discard silently</td>
+</tr>
+<tr>
+<td>Malformed packet (bad prefix/suffix)</td>
+<td>Discard, print error</td>
+</tr>
+<tr>
+<td>Buffer overflow (&gt; 128 bytes)</td>
+<td>Clear buffer, print error</td>
+</tr>
+</tbody>
+</table>
 <hr>
+<h2 id="error-handling">Error Handling</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Cause</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ERROR: Malformed packet — discarded</code></td>
+<td>Prefix or suffix bytes do not match <code>AZ</code>/<code>BY</code></td>
+<td>Packet dropped</td>
+</tr>
+<tr>
+<td><code>ERROR: Unknown sender — discarded</code></td>
+<td>Source byte not in known ID set</td>
+<td>Packet dropped</td>
+</tr>
+<tr>
+<td><code>Dropped own message (loop prevention)</code></td>
+<td>Source byte matches <code>H</code></td>
+<td>Packet dropped silently</td>
+</tr>
+<tr>
+<td><code>ERROR: Buffer overflow — cleared</code></td>
+<td>Accumulated buffer exceeds 128 bytes without a valid frame</td>
+<td>Buffer reset</td>
+</tr>
+</tbody>
+</table>
 
 
 
