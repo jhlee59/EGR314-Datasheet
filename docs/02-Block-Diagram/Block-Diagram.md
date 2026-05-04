@@ -6,8 +6,9 @@ tags:
 ---
 
 ## Overview
-This block diagram shows Team 301’s camera and sensor system, powered by a 12 V wall adapter regulated to 3.3 V. It includes front and back cameras. An ESP32 WiFi module connects wirelessly to an MQTT server to a PC to display the picture taken and the humidity level. 
+This block diagram shows Team 301’s camera and sensor system, powered by a 9V wall adapter regulated to 3.3 V. The whole board and two other voltage regulators are shown, as the camera requires 2.8V and 1.2V on certain pins to work. It includes a front camera connected via a ribbon cable. Using an ESP32 WiFi module to connect wirelessly to an MQTT server on a PC to display the picture taken. 
 
 ## Block Diagram 
 
-<img width="842" height="912" alt="IDBlockDiagram301 drawio" src="https://github.com/user-attachments/assets/7e36c59e-603c-4519-93f1-cf4aa7ce5366" />
+<img width="417" height="485" alt="Screenshot 2026-05-04 at 3 21 52 PM" src="https://github.com/user-attachments/assets/195a2004-291a-453b-baf3-3c01f1386a99" />
+
