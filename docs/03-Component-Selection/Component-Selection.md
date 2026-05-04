@@ -26,7 +26,7 @@ The following sections are the selected major components necessary for the camer
 
 | Name | Manufacturer | Pros | Cons | Price (1 unit) | Datasheet |
 |------|--------------|------|------|----------------|-----------|
-| **LM2575D2T-3.3R4G** ✓ | onsemi | Reliable, simple design, supports up to 1A output current, wide input voltage range | Larger package and lower efficiency compared to newer regulators | $2.49 | [Datasheet](https://www.onsemi.com/pdf/datasheet/lm2575-d.pdf) |
+| LM2575D2T-3.3R4G | onsemi | Reliable, simple design, supports up to 1A output current, wide input voltage range | Larger package and lower efficiency compared to newer regulators | $2.49 | [Datasheet](https://www.onsemi.com/pdf/datasheet/lm2575-d.pdf) |
 | TPS62162DSGR | Texas Instruments | Very high efficiency (95%), compact size, low heat generation | Smaller package makes PCB layout more difficult | $1.85 | [Datasheet](https://www.ti.com/lit/ds/symlink/tps62162.pdf) |
 | MIC5504-3.3YM5 | Microchip Technology | Low noise output, good for sensitive camera sensors, small footprint | Only supports ~300mA output current | $0.65 | [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/MIC5504-Data-Sheet-DS20005810A.pdf) |
 
@@ -38,7 +38,7 @@ The LM2575D2T-3.3R4G was selected for its simple, proven design and compatibilit
 
 | Name | Manufacturer | Pros | Cons | Price (1 unit) | Datasheet |
 |------|--------------|------|------|----------------|-----------|
-| **LM2575D2T-ADJG** ✓ | onsemi | Same footprint as 3.3V rail regulator — reuses existing schematic symbol and layout, output set by two resistors to exactly 2.8V, 1A output, wide 4V–40V input range | Larger TO-263 package compared to newer compact alternatives; lower switching frequency (52 kHz) means larger external inductor | $2.49 | [Datasheet](https://www.onsemi.com/download/data-sheet/pdf/lm2575-d.pdf) |
+| LM2575D2T-ADJG | onsemi | Same footprint as 3.3V rail regulator — reuses existing schematic symbol and layout, output set by two resistors to exactly 2.8V, 1A output, wide 4V–40V input range | Larger TO-263 package compared to newer compact alternatives; lower switching frequency (52 kHz) means larger external inductor | $2.49 | [Datasheet](https://www.onsemi.com/download/data-sheet/pdf/lm2575-d.pdf) |
 | TPS62162DSGR | Texas Instruments | Very high efficiency (~95%), compact 8-WSON package, 3MHz switching frequency allows tiny inductor | Minimum input voltage of 3V — tighter margin from 9V rail; smaller package increases PCB layout difficulty | $1.85 | [Datasheet](https://www.ti.com/lit/ds/symlink/tps62162.pdf) |
 | AP2112K-2.8TRG1 | Diodes Inc. | Ultra-small SOT-25 footprint, very low noise — ideal for analog camera rails | LDO, not switching — drops (9V − 2.8V) × I as heat; not practical at 1A from 9V input | $0.42 | [Datasheet](https://www.diodes.com/assets/Datasheets/AP2112.pdf) |
 
@@ -50,7 +50,7 @@ The LM2575D2T-ADJG was selected because it shares the exact same package, schema
 
 | Name | Manufacturer | Pros | Cons | Price (1 unit) | Datasheet |
 |------|--------------|------|------|----------------|-----------|
-| **LM2575D2T-ADJG** ✓ | onsemi | Consistent with 3.3V and 2.8V rails — single regulator family for all three supplies; output adjustable to 1.2V via resistor divider; proven 1A capability; TO-263 is solderable by hand for rework | 52 kHz switching frequency requires a larger inductor than high-frequency alternatives; TO-263 footprint is oversized relative to the current budget of this rail | $2.49 | [Datasheet](https://www.onsemi.com/download/data-sheet/pdf/lm2575-d.pdf) |
+| LM2575D2T-ADJG | onsemi | Consistent with 3.3V and 2.8V rails — single regulator family for all three supplies; output adjustable to 1.2V via resistor divider; proven 1A capability; TO-263 is solderable by hand for rework | 52 kHz switching frequency requires a larger inductor than high-frequency alternatives; TO-263 footprint is oversized relative to the current budget of this rail | $2.49 | [Datasheet](https://www.onsemi.com/download/data-sheet/pdf/lm2575-d.pdf) |
 | NCV6323FELMTW12TBG | onsemi | 2A output, compact WDFN package, 2MHz switching for small passive components | Higher complexity layout; WDFN exposed-pad requires reliable solder reflow — harder to hand rework | $1.12 | [Datasheet](https://www.onsemi.com/download/data-sheet/pdf/ncv6323-d.pdf) |
 | TPS62203DBVT | Texas Instruments | Very compact SOT-23-5, purpose-built for low-voltage low-current core rails, high efficiency | 300mA maximum output — marginal for camera core under full load; fixed 0.6V reference requires precise resistor values | $0.95 | [Datasheet](https://www.ti.com/lit/ds/symlink/tps62203.pdf) |
 
@@ -64,7 +64,7 @@ The LM2575D2T-ADJG was again selected to maintain a single regulator family acro
 
 | Name | Manufacturer | Pros | Cons | Price (1 unit) | Datasheet |
 |------|--------------|------|------|----------------|-----------|
-| [**ESP32-CAM WiFi BT BLE**](https://www.digikey.com/en/products/detail/canaduino-/ESP32-CAM-WIFI-BT-BLE/14319859) ✓ | Canaduino / AI-Thinker | Integrated MCU + OV2640 camera + Wi-Fi in one module; eliminates separate camera IC and wireless chip | Not a pure SMD camera IC; board form factor adds height | $16.99 | [Datasheet](https://www.allelcoelec.com/productdetails/ESP32-CAM%20WiFi%20BT%20BLE.html) |
+| [ESP32-CAM WiFi BT BLE](https://www.digikey.com/en/products/detail/canaduino-/ESP32-CAM-WIFI-BT-BLE/14319859) | Canaduino / AI-Thinker | Integrated MCU + OV2640 camera + Wi-Fi in one module; eliminates separate camera IC and wireless chip | Not a pure SMD camera IC; board form factor adds height | $16.99 | [Datasheet](https://www.allelcoelec.com/productdetails/ESP32-CAM%20WiFi%20BT%20BLE.html) |
 | [Seeed Camera Module 21277047](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/114993115/21277047) | Seeed Technology | Compact, CV-ready, good ecosystem support | Not pure SMD, may require adapter | $15.00 | [Datasheet](https://files.seeedstudio.com/wiki/ESP32-CAM/imgs/esp32-cam.pdf) |
 | [DFRobot DFR0602](https://www.digikey.com/en/products/detail/dfrobot/DFR0602/10385116) | DFRobot | Includes OV2640 2MP, same ESP32-CAM function | Not SMD-only camera chip, board form factor | $16.95 | [Datasheet](https://www.dfrobot.com/product-1783.html) |
 
