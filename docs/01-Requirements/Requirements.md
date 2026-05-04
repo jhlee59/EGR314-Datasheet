@@ -12,6 +12,6 @@ The following sections document the requirements that the camera system and char
 | Servo (Camera Pan/Tilt) | Hobby servo controlled via PWM; rotates at least 360° | Moves camera to any required angle for full coverage | Y |
 | Reverse Camera | Camera module active when reversing; provides rear view | Integrates with controller for operator awareness | Y |
 | Charging Station | Rover can sit in docking station| Rover can charge without much user input | Y |
-| Surface Mounted 3.3V Switching Power Regulator | 3.2V| 3.3V | N |
-| Surface Mounted Microcontroller | 1 PIC or ESP| 8-bit PIC | N |
+| Surface Mounted 3.3V Switching Power Regulator | 3.3V| 3.3V | N |
+| Surface Mounted Microcontroller | 1 ESP| 8-bit PIC | N |
 | Wireless Communication | Able to send/receive data | Send and receive Wi-Fi Data to MQTT | Y |
