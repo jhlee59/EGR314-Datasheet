@@ -1,4 +1,3 @@
-
 ---
 title: Module's PCB
 ---
@@ -23,6 +22,7 @@ Top layer:
 Bottom layer:
 <img width="647" height="642" alt="Screenshot 2026-03-08 231306" src="https://github.com/user-attachments/assets/2e0172bb-edbe-434e-a90d-affe99bea8a3" />
 
-*ADD
-[ECAD]()
-[Final Gerber]()
+
+[ECAD](https://github.com/user-attachments/files/27383795/final_314_ECAD.zip)
+
+[Final Gerber](https://github.com/user-attachments/files/27383761/314_pcb.zip)
